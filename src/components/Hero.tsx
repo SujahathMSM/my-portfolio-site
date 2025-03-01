@@ -32,6 +32,16 @@ const Hero = () => {
       className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden"
       ref={heroRef}
     >
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=3882&q=80" 
+          alt="Background" 
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-background/90 backdrop-blur-sm"></div>
+      </div>
+      
       <div className="absolute inset-0 overflow-hidden">
         <div className="hero-highlight absolute top-1/4 left-1/4 w-1/2 h-1/2 bg-primary/5 rounded-full filter blur-[100px] transition-transform duration-300 ease-out"></div>
       </div>
