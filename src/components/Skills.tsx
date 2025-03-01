@@ -98,9 +98,18 @@ const Skills = () => {
     <section
       id="skills"
       ref={sectionRef}
-      className="py-20"
+      className="py-20 relative"
     >
-      <div className="section-container">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80" 
+          alt="Background" 
+          className="w-full h-full object-cover object-center opacity-5"
+        />
+      </div>
+      
+      <div className="section-container relative z-10">
         <div className="animate-on-scroll text-center">
           <SectionHeading
             title="Technical Skills"
