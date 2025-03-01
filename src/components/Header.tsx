@@ -24,8 +24,10 @@ const Header = () => {
       const scrollY = window.scrollY;
       
       sections.forEach(section => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = (section as HTMLElement).offsetTop - 100;
+        // Explicitly cast to HTMLElement to access offsetHeight and offsetTop
+        const htmlSection = section as HTMLElement;
+        const sectionHeight = htmlSection.offsetHeight;
+        const sectionTop = htmlSection.offsetTop - 100;
         const sectionId = section.getAttribute('id') || '';
         
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
